@@ -2,17 +2,46 @@
 
 __author__ = "01234567"
 
-"""print("Welcome to COMP110!")
-print("You are in for a fun adventure into programming!")
-print("<3 the COMP110 Team!")
-print("spooky"[len("spooky")])"""
+
+def get_ticket_price_a() -> int:
+    age: int = int(input("What is your age?"))
+    if age <= 12:
+        price: int = 5
+    else:
+        price: int = 10
+    return price
 
 
-def sum(num1: int, num2: int) -> int:
-    """Add two numbers together"""
-    return num1 + num2
+def get_ticket_price_b() -> int:
+    age: int = int(input("What is your age?"))
+    if age <= 12:
+        price: int = 5
+    elif age > 60:
+        price: int = 5
+    else:
+        price: int = 10
+    return price
 
 
-print(sum(2, 3))
-print(sum(num1=2, num2=3))
-print(sum(2 + 1, 6 * 2))
+def get_ticket_price_c() -> int:
+    age: int = int(input("What is your age?"))
+    if (age <= 12) or (age > 60):
+        price: int = 5
+    else:
+        price: int = 10
+    return price
+
+
+def get_ticket_price_d() -> int:
+    age: int = int(input("What is your age?"))
+    if age <= 12:
+        price: int = 5
+    elif age <= 60:
+        price: int = 10
+    return price
+
+
+print(get_ticket_price_a())
+print(get_ticket_price_b())
+print(get_ticket_price_c())
+print(get_ticket_price_d())
