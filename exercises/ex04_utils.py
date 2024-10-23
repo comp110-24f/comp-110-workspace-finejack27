@@ -6,6 +6,10 @@ __author__: str = "730756949"
 def all(my_list: list[int], my_int: int) -> bool:
     """This function will check if an int-list's
     items are all equal to a given int"""
+    if len(my_list) == 0:
+        return False
+    # I missed the above if statement the first time I submitted!
+
     index: int = 0
 
     while index < len(my_list):
