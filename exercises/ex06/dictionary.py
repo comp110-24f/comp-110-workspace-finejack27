@@ -107,11 +107,15 @@ def update_attendance(attendance: dict[str, list[str]], day: str, student: str) 
     if day not in attendance:
         attendance[day] = []
 
-    attendance[day].append(student)
+    if student not in attendance[day]:
+        attendance[day].append(student)
+        # I originally was missing this if statement that prevents
+        # having a student listed on a given day twice
 
 
 # Personal test use cases for UPDATE_ATTENDANCE:
 # attendance_log: dict = {"Monday": ["Vrinda", "Kaleb"], "Tuesday": ["Alyssa"]}
 # update_attendance(attendance_log, "Tuesday", "Vrinda")
+# update_attendance(attendance_log, "Wednesday", "Kaleb")
 # update_attendance(attendance_log, "Wednesday", "Kaleb")
 # print(attendance_log)
